@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Danish Mukhtar | Portfolio</title>
+<style>
+/* Reset & Base */
+* { margin:0; padding:0; box-sizing:border-box; scroll-behavior:smooth; }
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg,#0f2027,#203a43,#2c5364);
+    color:#fff; overflow-x:hidden; position:relative;
+}
+
+/* Floating animation */
+@keyframes float {0%{transform:translateY(0px);}50%{transform:translateY(-15px);}100%{transform:translateY(0px);}}
+
+/* Particles & Neon lines */
+.particle{position:absolute;border-radius:50%;opacity:0.25;animation:floatParticles linear infinite;pointer-events:none;}
+@keyframes floatParticles{0%{transform:translateY(0) translateX(0) rotate(0deg);}50%{transform:translateY(-100px) translateX(50px) rotate(180deg);}100%{transform:translateY(0) translateX(0) rotate(360deg);} }
+.line{position:absolute;height:2px;width:100px;background:linear-gradient(to right,#ff6ec7,#00ffe7);opacity:0.3;animation:floatLine linear infinite;}
+@keyframes floatLine{0%{transform:translateY(0) translateX(0);}50%{transform:translateY(-50px) translateX(20px);}100%{transform:translateY(0) translateX(0);} }
+
+/* Header */
+header{ text-align:center; padding:4em 1em 6em; background: linear-gradient(135deg,#6a11cb,#2575fc); overflow:hidden; border-bottom-left-radius:50% 20%; border-bottom-right-radius:50% 20%; }
+#box{ width:160px; height:160px; border:4px solid rgba(255,255,255,0.8); border-radius:50%; background-image:url("image.jpg"); background-size:cover; margin:0 auto 1em; box-shadow:0 15px 25px rgba(0,0,0,0.2); animation:float 6s ease-in-out infinite; transition: transform 0.5s, box-shadow 0.5s;}
+#box:hover{transform:scale(1.15) rotate(5deg); box-shadow:0 25px 35px rgba(0,0,0,0.3),0 0 20px rgba(255,255,255,0.4);}
+.typing{ font-size:2.2em; font-weight:bold; color:#00ffe7; border-right:3px solid #00ffe7; white-space:nowrap; overflow:hidden; width:0; animation:typing 3s steps(15) forwards, blink 0.7s infinite; margin-bottom:0.5em; }
+@keyframes typing{ from{width:0;} to{width:14ch;} }
+@keyframes blink{50%{border-color:transparent;} }
+header p{ font-size:1.1em; color:#f0f0f0; font-weight:500; margin-top:0.5em; }
+
+/* Glass Sections */
+section{ max-width:900px; margin:2em auto; padding:2em; border-radius:25px; backdrop-filter:blur(15px); background:rgba(255,255,255,0.05); box-shadow:0 15px 25px rgba(0,0,0,0.2); border:1px solid rgba(255,255,255,0.15); transition:transform 0.6s, box-shadow 0.6s, background 0.6s; position:relative; z-index:1; opacity:0; transform:translateY(40px); }
+section.show{ opacity:1; transform:translateY(0); }
+section:hover{ transform:translateY(-10px); box-shadow:0 25px 45px rgba(0,0,0,0.35); background:rgba(255,255,255,0.1); }
+
+h2{text-align:center; font-size:2em; color:#ff6ec7; margin-bottom:1em; position:relative;}
+h2::after{ content:""; display:block; width:70px; height:4px; background:#ff6ec7; margin:10px auto 0; border-radius:2px; }
+
+ul{ list-style:none; padding:0; display:flex; flex-wrap:wrap; justify-content:center; }
+li{ background:rgba(255,110,199,0.2); color:#fff; padding:0.5em 1.2em; margin:0.5em; border-radius:30px; backdrop-filter:blur(10px); transition:transform 0.3s, background 0.3s; position:relative; }
+li:hover{ transform:scale(1.1); background:rgba(255,110,199,0.6); }
+li img{ width:30px; height:30px; margin-right:8px; vertical-align:middle; transition: transform 0.5s; }
+li:hover img{ transform:rotateY(360deg) scale(1.2); }
+
+/* Footer */
+footer{ text-align:center; padding:2em; background:linear-gradient(135deg,#6a11cb,#2575fc); color:#fff; font-weight:bold; border-top-left-radius:50% 20%; border-top-right-radius:50% 20%; }
+
+/* Responsive */
+@media(max-width:768px){ section{ margin:1em; padding:1.5em;} h2{ font-size:1.7em;} #box{ width:120px; height:120px;} li img{ width:25px; height:25px; } }
+
+/* Projects Section Enhanced */
+section.projects li{
+    display:flex; align-items:center; justify-content:flex-start; padding:1em 1.5em; background:rgba(255,110,199,0.15); transition:0.4s; 
+}
+section.projects li:hover{ transform:scale(1.05) translateY(-5px); background:rgba(255,110,199,0.35); box-shadow:0 15px 30px rgba(255,255,255,0.2);}
+section.projects li img{ width:50px; height:50px; margin-right:12px; transition: transform 0.5s, filter 0.5s; }
+section.projects li:hover img{ transform:rotateY(360deg) scale(1.2); filter:drop-shadow(0 0 10px #ff6ec7);}
+</style>
+</head>
+<body>
+
+<!-- Particles -->
+<div class="particle" style="width:20px;height:20px;background:#ff6ec7;top:10%;left:5%;animation-duration:20s;"></div>
+<div class="particle" style="width:30px;height:30px;background:#00ffe7;top:40%;left:10%;animation-duration:18s;"></div>
+<div class="particle" style="width:15px;height:15px;background:#ff6ec7;top:70%;left:25%;animation-duration:22s;"></div>
+<div class="particle" style="width:25px;height:25px;background:#00ffe7;top:20%;left:80%;animation-duration:19s;"></div>
+<div class="particle" style="width:10px;height:10px;background:#ff6ec7;top:60%;left:60%;animation-duration:24s;"></div>
+
+<!-- Neon Lines -->
+<div class="line" style="top:15%;left:50%;animation-duration:22s;"></div>
+<div class="line" style="top:60%;left:30%;animation-duration:25s;"></div>
+<div class="line" style="top:35%;left:70%;animation-duration:20s;"></div>
+
+<header>
+    <div id="box"></div>
+    <div class="typing">Danish Mukhtar.</div>
+    <p>Software Developer | Computer Science Engineering</p>
+</header>
+
+<section>
+    <h2>About Me</h2>
+    <p>I am a passionate computer science student with a keen interest in web development. Currently pursuing my degree, I have a strong foundation in HTML, CSS, and JavaScript. Always eager to learn and explore new technologies.</p>
+</section>
+
+<section>
+    <h2>Skills</h2>
+    <ul>
+        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML">HTML5</li>
+        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS">CSS3</li>
+        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JS">JavaScript</li>
+        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">Java</li>
+        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">Python</li>
+        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL">SQL</li>
+        <li><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="WebDev">Web Development</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Experience</h2>
+    <ul>
+        <li>
+            <strong>Cold Store – Green Preserve Agro Fresh Pvt. Ltd, Lassipora Pulwama</strong><br>
+            <em>Duration:</em> 6 Months<br>
+            <ul>
+                <li>Managed and monitored cold storage operations ensuring quality preservation of fruits and vegetables.</li>
+                <li>Assisted in inventory tracking, stock management, and maintaining proper temperature conditions.</li>
+                <li>Coordinated with the logistics team for smooth transportation and delivery of produce.</li>
+                <li>Learned operational workflows of cold storage management and safety protocols.</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Current Role – Grading Line Operator</strong><br>
+            <em>Company:</em> Green Preserve Agro Fresh Pvt. Ltd<br>
+            <ul>
+                <li>Operate grading machinery to ensure fruits and vegetables meet quality standards.</li>
+                <li>Inspect and sort produce for size, quality, and appearance.</li>
+                <li>Maintain efficient workflow while adhering to safety and hygiene standards.</li>
+                <li>Collaborate with team members to optimize line productivity and reduce waste.</li>
+            </ul>
+        </li>
+        <li>
+            <strong>Internship – Kisan Khidmat Ghar Udhyami Kenigam</strong><br>
+            <em>Role:</em> Data Operator in Agriculture Department<br>
+            <ul>
+                <li>Collected and organized agricultural data for local farmers and government programs.</li>
+                <li>Maintained accurate digital records and generated reports to support decision-making.</li>
+                <li>Assisted in data analysis and documentation for various agricultural projects.</li>
+                <li>Gained practical exposure to agricultural operations, data management, and administrative work.</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+<section class="projects">
+    <h2>Projects</h2>
+    <ul>
+        <li>
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Guess Game">
+            <div><strong>Guess Game</strong><br><a href="https://sultan-2008.github.io/game/" target="_blank">View Project</a></div>
+        </li>
+        <li>
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="Portfolio">
+            <div><strong>Portfolio Website</strong><br><a href="#" target="_blank">View Project</a></div>
+        </li>
+        <li>
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="Web App">
+            <div><strong>Web App</strong><br><a href="#" target="_blank">View Project</a></div>
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:smartwork4492@gmail.com">smartwork4492@gmail.com</a></p>
+    <p>Phone: <a href="tel:+6005864842">6005864842</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/danish-mukhtar-b6097a263" target="_blank">Danish Ahmad Dar</a></p>
+</section>
+
+<footer>
+    &copy; Danish Mukhtar 2024
+</footer>
+
+<script>
+// Scroll reveal effect
+const sections = document.querySelectorAll('section');
+window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY + window.innerHeight*0.75;
+    sections.forEach(sec => { if(scrollY > sec.offsetTop) sec.classList.add('show'); });
+});
+</script>
+
+</body>
+</html>
